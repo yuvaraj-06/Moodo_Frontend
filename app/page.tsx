@@ -1,81 +1,84 @@
-"use client";
+"use client"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans">
-      {/* Hero Section */}
-      <section className="bg-emerald-600 text-white py-20 text-center">
-        <h1 className="text-5xl font-bold mb-4">Experience Moodo</h1>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">Smart IoT fragrance diffusers with personalized capsule subscriptions. Transform your space, elevate your mood.</p>
-        <button className="bg-amber-500 text-slate-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-amber-400 transition">Discover Your Scent</button>
+    <div className="min-h-screen bg-white">
+      {/* Hero */}
+      <section className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl font-bold mb-4">Moodo</h1>
+          <p className="text-xl mb-8 opacity-90">Smart Fragrance for Smart Homes. IoT-connected diffusers with personalized scent capsules.</p>
+          <a href="#pricing" className="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-full text-lg transition">Get Started</a>
+        </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-12">Smart Scenting, Simplified</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto px-6">
-          <div className="p-6 bg-gray-100 rounded-lg shadow-sm">
-            <p className="text-5xl mb-4">📱</p><h3 className="text-xl font-semibold mb-2">App Control</h3><p className="text-gray-600">Manage fragrances from anywhere.</p>
-          </div>
-          <div className="p-6 bg-gray-100 rounded-lg shadow-sm">
-            <p className="text-5xl mb-4">🔄</p><h3 className="text-xl font-semibold mb-2">Subscription Service</h3><p className="text-gray-600">Fresh capsules delivered to your door.</p>
-          </div>
-          <div className="p-6 bg-gray-100 rounded-lg shadow-sm">
-            <p className="text-5xl mb-4">💡</p><h3 className="text-xl font-semibold mb-2">Smart Scheduling</h3><p className="text-gray-600">Automate your scent experience.</p>
-          </div>
-          <div className="p-6 bg-gray-100 rounded-lg shadow-sm">
-            <p className="text-5xl mb-4">🌿</p><h3 className="text-xl font-semibold mb-2">Natural Blends</h3><p className="text-gray-600">Premium essential oil based fragrances.</p>
+      {/* Features */}
+      <section className="py-16 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">Why Moodo?</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {[
+            { icon: "🌿", title: "Smart Scent Mixing", desc: "Mix and match 4 capsule slots to create your perfect scent blend." },
+            { icon: "📱", title: "App Controlled", desc: "Control intensity, schedule, and blend from your phone." },
+            { icon: "🔄", title: "Capsule Subscription", desc: "Never run out. Fresh capsules delivered monthly." },
+            { icon: "🏨", title: "Hospitality Ready", desc: "Enterprise solutions for hotels, spas, and retail spaces." },
+          ].map((f, i) => (
+            <div key={i} className="text-center p-6 rounded-xl bg-gray-50">
+              <div className="text-4xl mb-4">{f.icon}</div>
+              <h3 className="font-bold text-lg mb-2">{f.title}</h3>
+              <p className="text-gray-600">{f.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="bg-slate-900 text-white py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            {[
+              { step: "1", title: "Choose Your Device", desc: "Pick from our range of smart diffusers." },
+              { step: "2", title: "Select Capsules", desc: "Build your scent library from 50+ fragrances." },
+              { step: "3", title: "Enjoy & Automate", desc: "Set schedules, mix scents, and relax." },
+            ].map((s, i) => (
+              <div key={i}>
+                <div className="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">{s.step}</div>
+                <h3 className="font-bold text-lg mb-2">{s.title}</h3>
+                <p className="text-gray-300">{s.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="bg-slate-900 text-white py-16 text-center">
-        <h2 className="text-4xl font-bold mb-12">How Moodo Works</h2>
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto px-6">
-          <div className="p-6 bg-slate-800 rounded-lg shadow-md">
-            <p className="text-amber-500 text-3xl font-bold mb-2">1.</p><h3 className="text-xl font-semibold mb-2">Choose Your Diffuser</h3><p className="text-gray-300">Select the perfect Moodo device for your space.</p>
-          </div>
-          <div className="p-6 bg-slate-800 rounded-lg shadow-md">
-            <p className="text-amber-500 text-3xl font-bold mb-2">2.</p><h3 className="text-xl font-semibold mb-2">Subscribe to Capsules</h3><p className="text-gray-300">Pick from our range of curated fragrance collections.</p>
-          </div>
-          <div className="p-6 bg-slate-800 rounded-lg shadow-md">
-            <p className="text-amber-500 text-3xl font-bold mb-2">3.</p><h3 className="text-xl font-semibold mb-2">Enjoy Automated Bliss</h3><p className="text-gray-300">Control via app, set schedules, relax & enjoy.</p>
-          </div>
+      {/* Testimonials */}
+      <section className="py-16 px-6 max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-12">What People Say</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { name: "Sarah K.", text: "My home smells incredible. The app scheduling is genius." },
+            { name: "Hotel Marais", text: "We use Moodo in our lobby. Guests always comment on the scent." },
+            { name: "David R.", text: "The subscription means I always have fresh capsules. Love it." },
+          ].map((t, i) => (
+            <div key={i} className="p-6 bg-gray-50 rounded-xl">
+              <p className="text-gray-700 mb-3 italic">&ldquo;{t.text}&rdquo;</p>
+              <p className="font-bold text-sm text-emerald-700">{t.name}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-12">What Our Customers Say</h2>
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto px-6">
-          <div className="p-6 bg-gray-100 rounded-lg shadow-sm text-left">
-            <p className="text-gray-700 italic mb-4">"Moodo has transformed my home office! The scents are incredible and the app control is a game-changer."</p>
-            <p className="font-semibold text-emerald-600">- Sarah L.</p>
-          </div>
-          <div className="p-6 bg-gray-100 rounded-lg shadow-sm text-left">
-            <p className="text-gray-700 italic mb-4">"Absolutely love the subscription model. I never run out of my favorite fragrances. Highly recommend Moodo!"</p>
-            <p className="font-semibold text-emerald-600">- Mark P.</p>
-          </div>
-        </div>
+      {/* CTA */}
+      <section id="pricing" className="bg-emerald-600 text-white py-16 px-6 text-center">
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Space?</h2>
+        <p className="text-lg mb-8 opacity-90">Start with a device + 3 capsules. Cancel subscription anytime.</p>
+        <a href="https://moodo.co" className="bg-white text-emerald-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition">Shop Now</a>
       </section>
 
-      {/* Pricing/CTA Section */}
-      <section className="bg-emerald-600 text-white py-16 text-center">
-        <h2 className="text-4xl font-bold mb-6">Start Your Moodo Journey Today</h2>
-        <p className="text-xl mb-8 max-w-xl mx-auto">Get your Moodo diffuser and a curated capsule subscription to begin your enhanced sensory experience.</p>
-        <div className="mb-10">
-          <p className="text-5xl font-bold text-amber-500 mb-2">$199</p>
-          <p className="text-xl">Moodo Diffuser + Starter Pack</p>
-          <p className="text-lg mt-4">Subscriptions from <span className="font-bold text-amber-500">$19.99</span>/month</p>
-        </div>
-        <button className="bg-white text-emerald-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition">Order Moodo Now</button>
-      </section>
-
-      {/* Footer Section */}
-      <footer className="bg-slate-900 text-gray-400 py-8 text-center">
-        <p>&copy; 2023 Moodo. All rights reserved.</p>
+      {/* Footer */}
+      <footer className="bg-slate-900 text-gray-400 py-8 px-6 text-center">
+        <p>&copy; 2026 Moodo. Smart Fragrance Technology.</p>
       </footer>
     </div>
-  );
+  )
 }
