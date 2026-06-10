@@ -1,8 +1,8 @@
-import ./globals.css
+import './globals.css'
 
 export const metadata = {
-  title: Moodo,
-  description: Smart Fragrance for Smart Homes,
+  title: 'Moodo',
+  description: 'Smart Fragrance for Smart Homes',
 }
 
 export default function RootLayout({
